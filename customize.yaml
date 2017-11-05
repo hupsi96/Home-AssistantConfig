@@ -53,6 +53,8 @@ sensor.christians_ipad_battery_state:
 sensor.christians_ipad_battery_state_2:
   friensly_name: iPad Air State
 
+group.all_lights:
+  friendly_name: Zimmerlicht
 
 #Deactivate Hue lamps for emulated hue
 light.balon_links:
@@ -73,4 +75,37 @@ light.deckenlampe_3:
   emulated_hue: false
 
 light.schreibtisch_lampe:
+  emulated_hue: false
+
+
+ #Deactivate dedicated groups
+
+group.zimmer_light:
+  emulated_hue: false
+
+group.zimmer_data:
+  emulated_hue: false
+
+group.tracking:
+  emulated_hue: false
+
+group.network:
+  emulated_hue: false
+
+group.room_info:
+  emulated_hue: false
+
+group.battery:
+  emulated_hue: false
+
+group.state:
+  emulated_hue: false
+
+group.speedtest:
+  emulated_hue: false
+
+group.all_automations:
+  emulated_hue: false
+
+group.all_devices:
   emulated_hue: false

@@ -82,6 +82,8 @@ light:
 emulated_hue:
   exposed_domains:
     - light
+    - group
+    - media_player
 
 # Track the sun
 sun:
