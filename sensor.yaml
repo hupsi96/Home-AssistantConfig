@@ -1,0 +1,73 @@
+  - platform: yr
+
+  - platform: rest
+    resource: http://192.168.2.100/api/wR6Y0DcyOm3T1mUA5g0VNfK04JZ6i04K61EpaFSa/sensors/6
+    value_template: '{{ value_json.state.lightlevel }}'
+    unit_of_measurement: Lux
+    name: 'Zimmer Helligkeit'
+
+  - platform: rest
+    resource: http://192.168.2.100/api/wR6Y0DcyOm3T1mUA5g0VNfK04JZ6i04K61EpaFSa/sensors/4
+    value_template: '{{ value_json.state.temperature | float / 100 }}'
+    unit_of_measurement: °C
+    name: 'Zimmer Temperatur'
+
+  - platform: rest
+    resource: http://192.168.2.100/api/wR6Y0DcyOm3T1mUA5g0VNfK04JZ6i04K61EpaFSa/sensors/5
+    value_template: '{{ value_json.state.presence }}'
+    name: 'Zimmer Bewegung'
+    scan_interval: 2
+
+  - platform: rest
+    resource: http://192.168.2.100/api/wR6Y0DcyOm3T1mUA5g0VNfK04JZ6i04K61EpaFSa/sensors/5
+    value_template: '{{ value_json.config.battery }}'
+    unit_of_measurement: '%'
+    scan_interval: 10000
+    name: 'Bewegungsmelder Akku'
+
+  - platform: rest
+    resource: http://192.168.2.100/api/wR6Y0DcyOm3T1mUA5g0VNfK04JZ6i04K61EpaFSa/sensors/1
+    value_template: '{{ value_json.state.daylight }}'
+    name: 'Tageslicht'
+  
+  - platform: template
+    sensors:
+      battery_christians_ipad:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.christians_ipad.attributes.battery %}
+                {{ states.device_tracker.christians_ipad.attributes.battery|round }}
+            {% else %}
+                {{ states.sensor.battery_iphone.state }}
+            {%- endif %}
+
+  - platform: template
+    sensors:
+      battery_christians_ipad_home:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.christians_ipad_3.attributes.battery %}
+                {{ states.device_tracker.christians_ipad_3.attributes.battery|round }}
+            {% else %}
+                {{ states.sensor.battery_iphone.state }}
+            {%- endif %}
+
+  - platform: template
+    sensors:
+      battery_christians_iphone_5s:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.iphone_von_christian.attributes.battery %}
+                {{ states.device_tracker.iphone_von_christian.attributes.battery|round }}
+            {% else %}
+                {{ states.sensor.battery_iphone.state }}
+            {%- endif %}
+
+  - platform: speedtest
+    minute:
+      - 0
+      - 30
+    monitored_conditions:
+      - ping
+      - download
+      - upload

@@ -1,0 +1,106 @@
+#####Views
+zimmer_light:
+  view: yes
+  name: Zimmer Light
+  entities:
+    - group.licht
+    - group.led_stripes
+    - group.deckenlampe
+    - group.schreibtisch_licht
+    - group.ambiente_licht
+    - group.bett_light
+
+zimmer_data:
+  view: yes
+  name: Zimmer Data
+  entities:
+    - group.room_info
+
+tracking:
+  view: yes
+  name: Tracking
+  entities:
+    - device_tracker.iphone_von_christian
+    - device_tracker.christians_ipad
+    - group.battery
+    - group.state
+
+network:
+  view: yes
+  name: Network
+  entities:
+    - group.speedtest
+#    - group.cpu_pi
+
+#####Groups
+led_stripes:
+  name: LED
+  entities:
+    - light.Regal
+    - light.Schrank
+    - light.Weltkarte
+
+bett_light:
+  name: Bett
+  entities:
+    - light.Bett
+
+licht:
+  name: Licht
+  entities:
+    - group.ambiente_licht
+    - group.deckenlampe
+    - group.schreibtisch_licht
+    - group.led_stripes
+    - group.bett_light
+
+deckenlampe:
+  name: Deckenlampe
+  entities:
+    - light.deckenlampe_1
+    - light.deckenlampe_2
+    - light.deckenlampe_3
+
+schreibtisch_licht:
+  name: Schreibtisch
+  entities:
+    - light.schreibtisch
+    - light.schreibtisch_lampe
+
+ambiente_licht:
+  name: Balone
+  entities:
+    - light.balon_links
+    - light.balon_rechts
+
+room_info:
+  name: Daten
+  entities:
+    - sensor.zimmer_bewegung
+    - sensor.zimmer_temperatur
+    - sensor.zimmer_helligkeit
+    - sensor.bewegungsmelder_akku
+    - sensor.tageslicht
+
+battery:
+  name: Battery
+  entities:
+    - sensor.christians_ipad_battery_level
+    - sensor.iphone_von_christian_battery_level
+    - sensor.christians_ipad_battery_level_2
+
+state:
+  name: State
+  entities:
+    - sensor.christians_ipad_battery_state
+    - sensor.iphone_von_christian_battery_state
+    - sensor.christians_ipad_battery_state_2
+
+speedtest:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+

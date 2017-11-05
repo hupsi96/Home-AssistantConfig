@@ -1,0 +1,76 @@
+light.schreibtisch:
+  emulated_hue: true
+  icon: mdi:led-strip
+
+light.bett:
+  icon: mdi:led-strip
+
+light.weltkarte:
+  icon: mdi:led-strip
+
+light.regal:
+  icon: mdi:led-strip
+
+light.schrank:
+  icon: mdi:led-strip
+
+group.led_stripes:
+  icon: mdi:led-strip
+
+group.schreibtisch_licht:
+  icon: mdi:laptop-mac
+
+group.deckenlampe:
+  icon: mdi:ceiling-light
+
+group.ambiente_licht:
+  icon: mdi:lightbulb-outline
+
+sensor.zimmer_bewegung:
+  icon: mdi:alarm-bell
+
+sensor.zimmer_helligkeit:
+  icon: mdi:brightness-5
+
+sensor.zimmer_temperatur:
+  icon: mdi:temperature-celsius
+
+sensor.tageslicht:
+  icon: mdi:brightness-auto
+
+sensor.bewegungsmelder_akku:
+  icon: mdi:battery
+
+sensor.christians_ipad_battery_level:
+  friendly_name: iPad Air
+
+sensor.christians_ipad_battery_level_2:
+  friendly_name: iPad 3
+
+sensor.christians_ipad_battery_state:
+  firendly_name: iPad 3 State
+
+sensor.christians_ipad_battery_state_2:
+  friensly_name: iPad Air State
+
+
+#Deactivate Hue lamps for emulated hue
+light.balon_links:
+  emulated_hue: false
+  friendly_name: Balon Tür
+
+light.balon_rechts:
+  emulated_hue: false
+  friendly_name: Balon Fenster
+
+light.deckenlampe_1:
+  emulated_hue: false
+
+light.deckenlampe_2:
+  emulated_hue: false
+
+light.deckenlampe_3:
+  emulated_hue: false
+
+light.schreibtisch_lampe:
+  emulated_hue: false

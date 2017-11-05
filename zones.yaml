@@ -1,0 +1,23 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 50
+  icon: mdi:home
+
+- name: Airbus
+  latitude: !secret airbus_latitude
+  longitude: !secret airbus_longitude
+  radius: 400
+  icon: mdi:airplane
+
+- name: Uni Garching
+  latitude: !secret garching_latitude
+  longitude: !secret garching_longitude
+  radius: 700
+  icon: mdi:chair-school
+
+- name: Uni Innenstadt
+  latitude: !secret innenstadt_latitude
+  longitude: !secret innenstadt_longitude
+  radius: 300
+  icon: mdi:chair-school
