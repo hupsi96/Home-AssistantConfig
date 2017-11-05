@@ -32,6 +32,13 @@ network:
     - group.speedtest
 #    - group.cpu_pi
 
+media:
+  name: Media
+  view: yes
+  entities:
+    - media_player.bose_wohnzimmer
+    - media_player.fernseher_oben
+
 #####Groups
 led_stripes:
   name: LED

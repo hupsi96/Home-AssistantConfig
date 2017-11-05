@@ -98,6 +98,16 @@ tts:
 # iOS
 ios:
 
+# Media player
+media_player:
+  - platform: samsungtv
+    host: 192.168.2.123
+    name: Fernseher Oben
+    mac: !secret tvobenMac
+  - platform: soundtouch
+    host: 192.168.2.104
+    name: Bose Wohnzimmer
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
