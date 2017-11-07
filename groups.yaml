@@ -9,21 +9,26 @@ zimmer_light:
     - group.schreibtisch_licht
     - group.ambiente_licht
     - group.bett_light
-
-zimmer_data:
-  view: yes
-  name: Zimmer Data
-  entities:
     - group.room_info
+
+#zimmer_data:
+#  view: yes
+#  name: Zimmer Data
+#  entities:
+#    - group.room_info
 
 tracking:
   view: yes
   name: Tracking
   entities:
-    - device_tracker.iphone_von_christian
-    - device_tracker.christians_ipad
+    - device_tracker.iphonevonchristian
+    - device_tracker.evasiphone
+    - device_tracker.christiansipad
+    - device_tracker.christians_ipad3
+    - device_tracker.ipadvoneva
+    - device_tracker.christiansmacbookpro3
     - group.battery
-    - group.state
+#    - group.state
 
 network:
   view: yes
@@ -92,9 +97,12 @@ room_info:
 battery:
   name: Battery
   entities:
-    - sensor.christians_ipad_battery_level
-    - sensor.iphone_von_christian_battery_level
-    - sensor.christians_ipad_battery_level_2
+    - sensor.battery_christians_iphone
+    - sensor.battery_christians_ipad_air
+    - sensor.battery_christians_ipad_3
+    - sensor.battery_christians_mac
+    - sensor.battery_evas_iphone
+    - sensor.battery_evas_ipad
 
 state:
   name: State

@@ -32,36 +32,70 @@
   
   - platform: template
     sensors:
-      battery_christians_ipad:
+      battery_christians_mac:
         unit_of_measurement: '%'
         value_template: >-
-            {%- if states.device_tracker.christians_ipad.attributes.battery %}
-                {{ states.device_tracker.christians_ipad.attributes.battery|round }}
+            {%- if states.device_tracker.christiansmacbookpro3.attributes.battery %}
+                {{ states.device_tracker.christiansmacbookpro3.attributes.battery|round }}
             {% else %}
-                {{ states.sensor.battery_iphone.state }}
+                {{ states.sensor.battery_christiansmacbookpro3.state }}
             {%- endif %}
 
   - platform: template
     sensors:
-      battery_christians_ipad_home:
+      battery_christians_iphone:
         unit_of_measurement: '%'
         value_template: >-
-            {%- if states.device_tracker.christians_ipad_3.attributes.battery %}
-                {{ states.device_tracker.christians_ipad_3.attributes.battery|round }}
+            {%- if states.device_tracker.iphonevonchristian.attributes.battery %}
+                {{ states.device_tracker.iphonevonchristian.attributes.battery|round }}
             {% else %}
-                {{ states.sensor.battery_iphone.state }}
+                {{ states.sensor.battery_iphonevonchristian.state }}
             {%- endif %}
 
   - platform: template
     sensors:
-      battery_christians_iphone_5s:
+      battery_christians_ipad_air:
         unit_of_measurement: '%'
         value_template: >-
-            {%- if states.device_tracker.iphone_von_christian.attributes.battery %}
-                {{ states.device_tracker.iphone_von_christian.attributes.battery|round }}
+            {%- if states.device_tracker.christiansipad.attributes.battery %}
+                {{ states.device_tracker.christiansipad.attributes.battery|round }}
             {% else %}
-                {{ states.sensor.battery_iphone.state }}
+                {{ states.sensor.battery_christiansipad.state }}
             {%- endif %}
+
+  - platform: template
+    sensors:
+      battery_christians_ipad_3:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.christians_ipad3.attributes.battery %}
+                {{ states.device_tracker.christians_ipad3.attributes.battery|round }}
+            {% else %}
+                {{ states.sensor.battery_christians_ipad3.state }}
+            {%- endif %}
+
+  - platform: template
+    sensors:
+      battery_evas_iphone:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.evasiphone.attributes.battery %}
+                {{ states.device_tracker.evasiphone.attributes.battery|round }}
+            {% else %}
+                {{ states.sensor.battery_evasiphone.state }}
+            {%- endif %}
+
+  - platform: template
+    sensors:
+      battery_evas_ipad:
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if states.device_tracker.ipadvoneva.attributes.battery %}
+                {{ states.device_tracker.ipadvoneva.attributes.battery|round }}
+            {% else %}
+                {{ states.sensor.battery_ipadvoneva.state }}
+            {%- endif %}
+
 
   - platform: speedtest
     minute:

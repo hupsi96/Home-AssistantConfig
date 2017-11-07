@@ -41,20 +41,26 @@ sensor.tageslicht:
 sensor.bewegungsmelder_akku:
   icon: mdi:battery
 
-sensor.christians_ipad_battery_level:
-  friendly_name: iPad Air
+sensor.battery_christians_mac:
+  friendly_name: MacBook Pro Christian
 
-sensor.christians_ipad_battery_level_2:
-  friendly_name: iPad 3
+sensor.battery_christians_iphone:
+  friendly_name: iPhone 5s Christian
 
-sensor.christians_ipad_battery_state:
-  firendly_name: iPad 3 State
+sensor.battery_christians_ipad_air:
+  friendly_name: iPad Air Christian
 
-sensor.christians_ipad_battery_state_2:
-  friensly_name: iPad Air State
+sensor.battery_christians_ipad_3:
+  friendly_name: iPad 3 Christian
 
-group.all_lights:
-  friendly_name: Zimmerlicht
+sensor.battery_evas_iphone:
+  friendly_name: iPhone 5s Eva
+
+sensor.battery_evas_ipad:
+  friendly_name: iPad 3 Eva
+
+#group.all_lights:
+#  friendly_name: Zimmerlicht
 
 #Deactivate Hue lamps for emulated hue
 light.balon_links:

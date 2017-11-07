@@ -28,9 +28,6 @@
   condition:
     condition: and
     conditions:
-      - condition: numeric_state
-        entity_id: sensor.zimmer_helligkeit
-        below: '4000'
       - condition: state
         entity_id: automation.nachtlicht_ein
         state: 'on'

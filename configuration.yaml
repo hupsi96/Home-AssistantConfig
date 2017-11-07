@@ -109,6 +109,11 @@ media_player:
     host: 192.168.2.104
     name: Bose Wohnzimmer
 
+device_tracker:
+  - platform: icloud
+    username: !secret icloudUser
+    password: !secret icloudPW
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
