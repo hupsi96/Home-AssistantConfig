@@ -71,3 +71,7 @@
       - ping
       - download
       - upload
+
+  - platform: deutsche_bahn
+    from: Ebersberg
+    to: Ostbahnhof

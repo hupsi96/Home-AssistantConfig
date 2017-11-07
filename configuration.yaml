@@ -103,6 +103,7 @@ media_player:
   - platform: samsungtv
     host: 192.168.2.123
     name: Fernseher Oben
+    port: 8001
     mac: !secret tvobenMac
   - platform: soundtouch
     host: 192.168.2.104
