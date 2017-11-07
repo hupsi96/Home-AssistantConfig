@@ -16,6 +16,11 @@ homeassistant:
 
 # Enables the frontend
 frontend:
+  themes:
+    night:
+      primary_color: black
+    day:
+      primary_color: "#6CA518"
 
 # Enables configuration UI
 config:
