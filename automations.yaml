@@ -1,5 +1,27 @@
+#- alias: 'Nachtlicht ein'
+#  trigger: 
+#    platform: state
+#    entity_id: sensor.zimmer_bewegung
+#    to: 'True'
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: state
+#        entity_id: group.all_lights
+#        state: 'off'
+#      - condition: numeric_state
+#        entity_id: sensor.zimmer_helligkeit
+#        below: '4000'
+#  action:
+#    service: light.turn_on
+#    entity_id:
+#      - light.bett
+#    data:
+#      brightness: 40
+#      white_value: 255
+
 - alias: 'Nachtlicht ein'
-  trigger: 
+  trigger:
     platform: state
     entity_id: sensor.zimmer_bewegung
     to: 'True'
@@ -11,13 +33,13 @@
         state: 'off'
       - condition: numeric_state
         entity_id: sensor.zimmer_helligkeit
-        below: '4000'
+        below: '5000'
   action:
     service: light.turn_on
     entity_id:
       - light.bett
     data:
-      brightness: 40
+      brightness: 20
       white_value: 255
 
 - alias: 'Nachtlicht aus'
@@ -29,47 +51,56 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: automation.nachtlicht_ein
-        state: 'on'
-      - condition: state
-        entity_id: group.ambiente_light
-        state: 'off'
-      - condition: state
         entity_id: group.deckenlampe
         state: 'off'
       - condition: state
         entity_id: group.led_stripes
         state: 'off'
       - condition: state
-        entity_id: group.schreibtisch_light
+        entity_id: group.schreibtisch_licht
         state: 'off'
+      - condition: state
+        entity_id: group.ambiente_licht
+        state: 'off'
+      - condition: state
+        entity_id: automation.nachtlicht_ein
+        state: 'on'
   action:
-    - delay: 00:00:05
-    - condition: state
-      entity_id: sensor.zimmer_bewegung
-      state: 'False'
-    - service: light.turn_off
-      entity_id:
-        - light.bett
+    service: light.turn_off
+    entity_id: light.bett
 
-- alias: 'Dämmerung'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.zimmer_helligkeit
-    below: '7000'
-  condition:
-    condition: state
-    entity_id: group.all_lights
-    state: 'off'
-  action:
-    service: light.turn_on
-    entity_id:
-      - light.bett
-      - light.regal
-      - light.schrank
-      - light.schreibtisch
-      - group.ambiente_licht
-    data:
-      brightness: 200
-      rgb_color: [255,140,0]
-      transition: 300
+#- alias: 'Nachtlicht aus'
+#  trigger:
+#    platform: state
+#    entity_id: sensor.zimmer_bewegung
+#    to: 'False'
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: state
+#        entity_id: automation.nachtlicht_ein
+#        state: 'on'
+#      - condition: state
+#        entity_id: group.ambiente_light
+#        state: 'off'
+#      - condition: state
+#        entity_id: group.deckenlampe
+#        state: 'off'
+#      - condition: state
+#        entity_id: group.led_stripes
+#        state: 'off'
+#      - condition: state
+#        entity_id: group.schreibtisch_light
+#        state: 'off'
+#  action:
+#    - service: light.turn_on
+#      entity_id:
+#        - light.regal
+#    - delay: 00:00:05
+#    - condition: state
+#      entity_id: sensor.zimmer_bewegung
+#      state: 'False'
+#    - service: light.turn_off
+#      entity_id:
+#        - light.bett
+

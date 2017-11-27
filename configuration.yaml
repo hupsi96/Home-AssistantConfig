@@ -85,6 +85,7 @@ light:
 
 #HUE Emulated
 emulated_hue:
+  host_ip: 192.168.2.117
   exposed_domains:
     - light
     - group
@@ -106,7 +107,7 @@ ios:
 # Media player
 media_player:
   - platform: samsungtv
-    host: 192.168.2.123
+    host: 192.168.2.112
     name: Fernseher Oben
     port: 8001
     mac: !secret tvobenMac
@@ -114,10 +115,14 @@ media_player:
     host: 192.168.2.104
     name: Bose Wohnzimmer
 
-device_tracker:
-  - platform: icloud
-    username: !secret icloudUser
-    password: !secret icloudPW
+#device_tracker:
+#  - platform: icloud
+#    username: !secret icloudUser
+#    password: !secret icloudPW
+
+apple_tv:
+  host: 192.168.2.127
+  login_id: !secret appleTVwohnzimmerloginid
 
 group: !include groups.yaml
 automation: !include automations.yaml

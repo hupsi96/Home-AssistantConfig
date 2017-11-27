@@ -1,7 +1,7 @@
 #####Views
 zimmer_light:
   view: yes
-  name: Zimmer Light
+  name: Christian Zimmer
   entities:
     - group.licht
     - group.led_stripes
@@ -11,38 +11,30 @@ zimmer_light:
     - group.bett_light
     - group.room_info
 
-#zimmer_data:
-#  view: yes
-#  name: Zimmer Data
-#  entities:
-#    - group.room_info
 
 tracking:
   view: yes
   name: Tracking
   entities:
-    - device_tracker.iphonevonchristian
-    - device_tracker.evasiphone
-    - device_tracker.christiansipad
-    - device_tracker.christians_ipad3
-    - device_tracker.ipadvoneva
-    - device_tracker.christiansmacbookpro3
+    - device_tracker.iphone_x
     - group.battery
-#    - group.state
+    - group.state
 
 network:
   view: yes
   name: Network
   entities:
     - group.speedtest
-#    - group.cpu_pi
 
-media:
-  name: Media
+wohnzimmer:
+  name: Wohnzimmer
   view: yes
   entities:
     - media_player.bose_wohnzimmer
     - media_player.fernseher_oben
+    - media_player.apple_tv
+    - remote.apple_tv
+    - group.wohnzimmer_licht
 
 #####Groups
 led_stripes:
@@ -97,19 +89,12 @@ room_info:
 battery:
   name: Battery
   entities:
-    - sensor.battery_christians_iphone
-    - sensor.battery_christians_ipad_air
-    - sensor.battery_christians_ipad_3
-    - sensor.battery_christians_mac
-    - sensor.battery_evas_iphone
-    - sensor.battery_evas_ipad
+    - sensor.iphone_von_christian_battery_level_2
 
 state:
   name: State
   entities:
-    - sensor.christians_ipad_battery_state
-    - sensor.iphone_von_christian_battery_state
-    - sensor.christians_ipad_battery_state_2
+    - sensor.iphone_von_christian_battery_state_2
 
 speedtest:
   name: Speedtest
@@ -118,4 +103,8 @@ speedtest:
     - sensor.speedtest_download
     - sensor.speedtest_upload
 
-
+wohnzimmer_licht:
+  name: Wohnzimmer Licht
+  entities:
+    - light.stehlampe_oben
+    - light.filo

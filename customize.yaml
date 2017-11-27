@@ -1,25 +1,30 @@
 light.schreibtisch:
   emulated_hue: true
   icon: mdi:led-strip
+  homebridge_visible: true
 
 light.bett:
   icon: mdi:led-strip
+  homebridge_visible: true
 
 light.weltkarte:
   icon: mdi:led-strip
+  homebridge_visible: true
 
 light.regal:
   icon: mdi:led-strip
+  homebridge_visible: true
 
 light.schrank:
   icon: mdi:led-strip
+  homebridge_visible: true
 
 group.led_stripes:
   icon: mdi:led-strip
 
 group.schreibtisch_licht:
   icon: mdi:laptop-mac
-
+  emulated_hue: false
 group.deckenlampe:
   icon: mdi:ceiling-light
 
@@ -40,24 +45,6 @@ sensor.tageslicht:
 
 sensor.bewegungsmelder_akku:
   icon: mdi:battery
-
-sensor.battery_christians_mac:
-  friendly_name: MacBook Pro Christian
-
-sensor.battery_christians_iphone:
-  friendly_name: iPhone 5s Christian
-
-sensor.battery_christians_ipad_air:
-  friendly_name: iPad Air Christian
-
-sensor.battery_christians_ipad_3:
-  friendly_name: iPad 3 Christian
-
-sensor.battery_evas_iphone:
-  friendly_name: iPhone 5s Eva
-
-sensor.battery_evas_ipad:
-  friendly_name: iPad 3 Eva
 
 #group.all_lights:
 #  friendly_name: Zimmerlicht
@@ -115,3 +102,15 @@ group.all_automations:
 
 group.all_devices:
   emulated_hue: false
+
+#group.schreibtisch_licht
+#  emulated_hue: false
+
+group.bett_light:
+  emulated_hue: false
+
+device_tracker.iphone_x:
+  friendly_name: Christian
+
+sensor.iphone_von_christian_battery_level_2:
+  friendly_name: Christian iPhone X
