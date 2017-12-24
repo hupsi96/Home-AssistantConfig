@@ -1,5 +1,5 @@
 light.schreibtisch:
-  emulated_hue: true
+  emulated_hue_hidden: false
   icon: mdi:led-strip
   homebridge_visible: true
 
@@ -24,7 +24,7 @@ group.led_stripes:
 
 group.schreibtisch_licht:
   icon: mdi:laptop-mac
-  emulated_hue: false
+  emulated_hue_hidden: true
 group.deckenlampe:
   icon: mdi:ceiling-light
 
@@ -51,24 +51,48 @@ sensor.bewegungsmelder_akku:
 
 #Deactivate Hue lamps for emulated hue
 light.balon_links:
-  emulated_hue: false
+  emulated_hue_hidden: true
   friendly_name: Balon Tür
 
 light.balon_rechts:
-  emulated_hue: false
+  emulated_hue_hidden: true
   friendly_name: Balon Fenster
 
 light.deckenlampe_1:
-  emulated_hue: false
+  emulated_hue_hidden: true
 
 light.deckenlampe_2:
-  emulated_hue: false
+  emulated_hue_hidden: true
 
 light.deckenlampe_3:
-  emulated_hue: false
+  emulated_hue_hidden: true
 
 light.schreibtisch_lampe:
-  emulated_hue: false
+  emulated_hue_hidden: true
+
+light.stehlampe_oben:
+  emulated_hue_hidden: true
+
+light.filo:
+  emulated_hue_hidden: true
+
+light.esstisch_1:
+  emulated_hue_hidden: true
+
+light.esstisch_2:
+  emulated_hue_hidden: true
+
+light.fado_bank:
+  emulated_hue_hidden: true
+
+light.fado_1:
+  emulated_hue_hidden: true
+
+light.stehlampe_klein:
+  emulated_hue_hidden: true
+
+light.gang:
+  emulated_hue_hidden: true
 
 
  #Deactivate dedicated groups
